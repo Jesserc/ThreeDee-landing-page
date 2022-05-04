@@ -1,0 +1,142 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: "Dm Sans";
+}
+body {
+	// background-color: #d9bfff;
+	background: radial-gradient(circle at 50% 50%, #cec1d3, #d7aedf, #e79aed);
+}
+header {
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+
+	display: flex;
+	flex-direction: column;
+
+	nav {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 70%;
+		position: fixed;
+		top: 20px;
+		.nav-container {
+			padding-top: 10px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+			.logo {
+				color: rgb(71, 42, 71);
+				font-size: 1.3rem;
+				&:hover {
+					cursor: pointer;
+					color: white;
+				}
+			}
+			.links {
+				color: rgb(71, 42, 71);
+				font-size: 1.1rem;
+				&:hover {
+					cursor: pointer;
+					color: white;
+				}
+				ul {
+					width: 100%;
+					display: flex;
+					list-style: none;
+
+					li {
+						padding-left: 20px;
+					}
+				}
+			}
+		}
+	}
+}
+
+main {
+	.hero {
+		height: 100vh;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding-top: 30px;
+		.img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			margin-top: 70px ;
+		}
+		.hero-child {
+			width: 35%;
+			height: 35%;
+			color: rgb(58, 25, 58);
+			.text {
+				color: rgb(174, 0, 255);
+			}
+		}
+	}
+	section {
+		.hero-section {
+			height: 90vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			.container {
+				width: 70%;
+				display: flex;
+				justify-content: space-between;
+				.flex-child {
+					width: 30%;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					align-items: center;
+					background-color: white;
+					border-radius: 10px;
+					padding: 20px;
+					margin: 20px;
+					color: rgb(58, 25, 58);
+					box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+					transition: all 0.3s ease;
+
+					&:hover {
+						animation: roll 1s;
+						@keyframes roll {
+							0% {
+								transform: rotate(0deg);
+							}
+							100% {
+								transform: rotate(360deg);
+							}
+						}
+						cursor: pointer;
+						color: white;
+						background-color: rgb(174, 0, 255);
+					}
+					h3 {
+						text-align: center;
+						margin-bottom: 25px;
+					}
+				}
+			}
+		}
+	}
+}
+
+footer {
+	background-color: rgb(58, 25, 58);
+	color: rgb(255, 255, 255);
+	text-align: center;
+	padding: 20px;
+	font-size: 1.1em;
+}
